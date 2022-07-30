@@ -1,21 +1,17 @@
-// Write a js program to swap nos from user using another way
+// write a js program to find sum of first n +ve nos 
+// 5->1+2+3+4+5=15
 const ps=require("prompt-sync");
 const prompt=ps();
-try{
-let s1=prompt("Enter a nos :");
-if(! s1.match(/^[-0-9]+$/))   // Regular expression
-throw "Invalid  first integer... ";
-let n1=parseInt(s1);
-let s2=prompt("Enter a nos :");
-if(! s2.match(/^[-0-9]+$/))   // Regular expression
-throw "Invalid  Second integer... ";
-let n2=parseInt(s2);
-n1=n1+n2;
-n2=n1-n2;
-n1=n1-n2;
-console.log("n1="+n1);
-console.log("n2="+n2);
+let num=parseInt(prompt("Enter a +ve nos : "));
+if(num>0){
+let i=1;
+let sum=0;
+while(i<=num){
+ sum=sum+i;
+i=i+1;
 }
-catch(err){
-console.log(err)
+console.log("sum : "+sum);
+}
+else{
+console.log("Invalid Input");
 }

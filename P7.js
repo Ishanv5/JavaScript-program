@@ -1,22 +1,13 @@
-// Write a js program to swap nos from user
+//write a js program to read rating between  1 to 5 using switch case
+// 5/4->excellent... 3/2->good.... 1->okay
 const ps=require("prompt-sync");
 const prompt=ps();
-try{
-let s1=prompt("Enter a nos :");
-if(! s1.match(/^[-0-9]+$/))   // Regular expression
-throw "Invalid  first integer... ";
-let n1=parseInt(s1);
-let s2=prompt("Enter a nos :");
-if(! s2.match(/^[-0-9]+$/))   // Regular expression
-throw "Invalid  Second integer... ";
-let n2=parseInt(s2);
-let temp;
-temp=n1;
-n1=n2;
-n2=temp;
-console.log("n1="+n1);
-console.log("n2="+n2);
-}
-catch(err){
-console.log(err)
+let rating= parseInt(prompt("Enter rating between 1-5 : "));
+switch(rating){
+  case 5:
+  case 4: console.log("Excellent");break;
+  case 3:
+  case 2: console.log("Good");break;
+  case 1: console.log("Okay");break;
+ default:console.log("Invalid rating");break;
 }

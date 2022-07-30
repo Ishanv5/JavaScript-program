@@ -1,18 +1,13 @@
-// write  js program to print odd and even using if else
+//write a js program to read marks of student and find low and high marks
 const ps=require("prompt-sync");
 const prompt=ps();
-let s1=prompt("Enter a nos ");
-let n1=parseInt(s1);
-if(n1%2==0){
-   console.log("Even");
+let marks=[];
+res=prompt("Do u want to enter marks y/n :");
+while(res=="y"){
+let m=parseInt(prompt("Enter ur marks : "));
+marks.push(m);
+res=prompt("Do u want to enter marks y/n :");
 }
-else{
-  console.log("Odd");
-}
-
-let ans="";
-if(n1%2==0)
-ans="even";
-else
-ans="odd";
-console.log(ans);
+console.log(marks);
+console.log(Math.max(...marks));
+console.log(Math.min(...marks));// spreadout operator

@@ -1,9 +1,13 @@
-// write a js program  to add two integer from user
-const ps=require("prompt-sync");
+//write a js program to welcome the user provided in alphabet using try catch
+const ps=require("prompt-sync"); 
 const prompt=ps();
-let s1=prompt("Enter First integer : ");
-let n1=parseInt(s1);
-let s2=prompt("Enter First integer : ");
-let n2=parseInt(s2);
-let res=n1+n2;
-console.log("res="+res);
+let name=prompt("Enter ur name : ");
+try{
+if(name.match(/^[A-Za-z ]+$/)){
+   console.log("Welcome "+name);
+}else{
+   throw "Invalid name..";
+}
+}catch(err){
+console.log(err);
+}

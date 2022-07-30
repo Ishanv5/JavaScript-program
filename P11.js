@@ -1,17 +1,16 @@
-// write  js program to read radius from user to calculate 
+// write a js program to find sum of first n +ve nos  using do while loop
+// 5->1+2+3+4+5=15
 const ps=require("prompt-sync");
 const prompt=ps();
-try{
-let s1=prompt("Enter radius :");
-if(! s1.match(/^[0-9.]+$/))   // Regular expression
-throw "Invalid  radius... ";
-let n1=parseFloat(s1);
-
-let c=2*Math.PI*n1;
-let a=Math.PI*Math.pow(n1,2);
-console.log("Circumference="+c.toFixed(2));
-console.log("Area="+a.toFixed(2));
-}
-catch(err){
-console.log(err)
+let num=parseInt(prompt("Enter a +ve nos : "));
+if(num>0){
+let i=1;
+let sum=0;
+do{
+sum=sum+i;
+i=i+1;
+}while(i<=num);
+console.log("sum : "+sum);
+}else{
+console.log("Invalid..");
 }

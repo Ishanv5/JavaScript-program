@@ -1,4 +1,3 @@
-// write a js program to welcome user...
-console.log("Welcome User...");
-console.log("This is Lecture 1");
-console.log("Today we do inst,intro and js fundamentals");
+//write a js program to welcome the user
+console.log("Welcome User");
+console.log("Today This lect 1 of Js.."); 

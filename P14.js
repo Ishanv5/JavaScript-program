@@ -1,18 +1,9 @@
-// write  js program to read 3 nos  and find max nos
-const ps=require("prompt-sync");
-const prompt=ps();
-let s1=prompt("Enter a nos ");
-let n1=parseFloat(s1);
-let s2=prompt("Enter a nos ");
-let n2=parseFloat(s2);
-let s3=prompt("Enter a nos ");
-let n3=parseFloat(s3);
-if((n1>n2) && (n1>n3)){
-console.log(n1);
-}else if((n2>n1) && (n2>n3))
-{
-console.log(n2);
-}
-else{
-
-console.log(n3);}
+// write js program to demo array
+d1=[]
+console.log(d1, typeof d1,Array.isArray(d1));
+d2=[10,30,40,56];
+console.log(d2);
+d3=["ishan","sujal","anand"];
+console.log(d3);
+d4=new Array();
+console.log(d4, typeof d1,Array.isArray(d4));

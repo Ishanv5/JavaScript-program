@@ -1,13 +1,15 @@
-// write  js program to read 2 nos  and find min nos
+//write a js program to find factorial
 const ps=require("prompt-sync");
 const prompt=ps();
-let s1=prompt("Enter a nos ");
-let n1=parseInt(s1);
-let s2=prompt("Enter a nos ");
-let n2=parseInt(s2);
-if(n1>n2){
-console.log(n2);
-}else
-{
-console.log(n1);
+let num=parseInt(prompt("Enter a nos : "));
+if(num>0){
+let fact=BigInt(1);
+let i=BigInt(1);
+do{
+  fact=fact*i;
+i=i+BigInt(1);
+}while(i<=num);
+console.log("Factorial : "+fact);
+}else{
+  console.log("Invalid");
 }

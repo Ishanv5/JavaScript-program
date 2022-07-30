@@ -1,6 +1,18 @@
-// write  js program to print odd and even using conditional operator
+//write a js program to read marks of student and find total and avg
 const ps=require("prompt-sync");
 const prompt=ps();
-let s1=prompt("Enter a nos ");
-let n1=parseInt(s1);
-(n1%2==0)?console.log("Even"):console.log("Odd");
+let marks=[];
+res=prompt("Do u want to enter marks y/n :");
+while(res=="y"){
+let m=parseInt(prompt("Enter ur marks : "));
+marks.push(m);
+res=prompt("Do u want to enter marks y/n :");
+}
+console.log(marks);
+let sum=0;
+for(let i=0;i<marks.length;i++){
+ sum=sum+marks[i];
+}
+let avg=sum/marks.length;
+console.log("sum : "+sum);
+console.log("avg : "+avg);
